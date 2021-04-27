@@ -1,4 +1,5 @@
-<table class="table table-striped">
+<div id="tabla">
+    <table class="table table-striped">
     <thead>
     <tr>
       <th scope="col">Nombre Completo</th>
@@ -8,7 +9,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let user of Lista; index as i">
+    <tr *ngFor="let user of Lista">
       <td>
         {{user.nombre}} {{user.apellido}}
       </td>
@@ -17,4 +18,5 @@
       <td>{{user.ciudad}}</td>
     </tr>
     </tbody>
-  </table>
+</table>
+</div>
