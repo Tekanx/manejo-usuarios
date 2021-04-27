@@ -1,4 +1,16 @@
-<p>vista-principal works!</p>
-<li>
-    
-</li>
+<ul>
+    <li *ngFor = "let user of Lista">
+        <mat-card class="example-card">
+            <mat-card-header>
+            <div mat-card-avatar class="image" *ngIf = "user.genero == 'Hombre'">
+                <mat-icon aria-hidden="false" aria-label="Male Icon">male</mat-icon>
+            </div>
+            <div mat-card-avatar class="image" *ngIf = "user.genero == 'Mujer'">
+                <mat-icon aria-hidden="false" aria-label="Female Icon">female</mat-icon>
+            </div>
+            <mat-card-title>{{user.nombre}} {{user.apellido}}</mat-card-title>
+            <mat-card-subtitle>{{user.pais}}, {{user.ciudad}}</mat-card-subtitle>
+            </mat-card-header>
+        </mat-card>
+    </li>
+</ul>

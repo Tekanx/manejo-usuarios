@@ -16,7 +16,7 @@ export const ListaUsuario : Array<Usuario> =
         ciudad: "Viña del Mar"
     },
     {
-        nombre: "Paual",
+        nombre: "Paula",
         apellido: "Vargas",
         genero: "Mujer",
         pais: "Chile",
@@ -27,7 +27,7 @@ export const ListaUsuario : Array<Usuario> =
         apellido: "Iriarte",
         genero: "Hombre",
         pais: "Chile",
-        ciudad: "Con con"
+        ciudad: "Con Con"
     },
     {
         nombre: "Daniel",
