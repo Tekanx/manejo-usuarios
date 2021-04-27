@@ -42,5 +42,12 @@ export const ListaUsuario : Array<Usuario> =
         genero: "Mujer",
         pais: "Chile",
         ciudad: "Santiago"
+    },
+    {
+        nombre: "Pablo",
+        apellido: "Torregey",
+        genero: "Otro",
+        pais: "Chile",
+        ciudad: "Viña del Mar"
     }
 ]
