@@ -1,0 +1,16 @@
+ul {
+    padding-top: 2em;
+}
+ul li{
+    display: inline-block;
+    height: max-content;
+    width: 25em;
+    list-style-type: none;
+    padding: 8px;
+}
+
+.image{
+    height: 20px;
+    width: 20px;
+    background-size: cover;
+}
