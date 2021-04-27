@@ -1,1 +1,20 @@
-<p>vista-lista works!</p>
+<table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">Nombre Completo</th>
+      <th scope="col">Género</th>
+      <th scope="col">País</th>
+      <th scope="col">Ciudad</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of Lista; index as i">
+      <td>
+        {{user.nombre}} {{user.apellido}}
+      </td>
+      <td>{{user.genero}}</td>
+      <td>{{user.pais}}</td>
+      <td>{{user.ciudad}}</td>
+    </tr>
+    </tbody>
+  </table>
