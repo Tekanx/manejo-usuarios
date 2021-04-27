@@ -8,6 +8,9 @@
             <div mat-card-avatar class="image" *ngIf = "user.genero == 'Mujer'">
                 <mat-icon aria-hidden="false" aria-label="Female Icon">female</mat-icon>
             </div>
+            <div mat-card-avatar class="image" *ngIf = "user.genero == 'Otro'">
+                <mat-icon aria-hidden="false" aria-label="Transgender Icon">transgender</mat-icon>
+            </div>
             <mat-card-title>{{user.nombre}} {{user.apellido}}</mat-card-title>
             <mat-card-subtitle>{{user.pais}}, {{user.ciudad}}</mat-card-subtitle>
             </mat-card-header>
