@@ -6,10 +6,11 @@ import { Usuario, ListaUsuario } from '../../interfaces/usuario'
   templateUrl: './vista-lista.component.html',
   styleUrls: ['./vista-lista.component.scss']
 })
+
 export class VistaListaComponent implements OnInit {
 
-  Lista = ListaUsuario;
-
+Lista = ListaUsuario;
+  
   constructor() { }
 
   ngOnInit(): void {

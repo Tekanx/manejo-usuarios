@@ -6,6 +6,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatListModule } from '@angular/material/list';
 
 import { AppComponent } from './app.component';
 import { ListaUsuariosComponent } from './listadoUsuarios/lista-usuarios/lista-usuarios.component';
@@ -33,7 +34,8 @@ import { VistaCrearComponent } from './pages/vista-crear/vista-crear.component';
     MatIconModule, 
     MatToolbarModule, 
     NgbModule,
-    MatCardModule
+    MatCardModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
