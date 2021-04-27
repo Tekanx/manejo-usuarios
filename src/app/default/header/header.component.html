@@ -1,0 +1,31 @@
+<nav>
+    <div id="toolbar">
+        <mat-toolbar>
+            <mat-icon aria-hidden="false" aria-label="User Icon">houseuser</mat-icon>
+            <span>Gestor de Clientes</span>
+        </mat-toolbar>
+    </div>
+    <div id="navegator">
+        <a [routerLink] = "['/']" routerLinkActive="router-link-active">
+            <button mat-button>
+                <mat-icon aria-hidden="false" aria-label="Portrait Icon">portrait</mat-icon>
+                Vista Card
+            </button>
+        </a>
+
+        <a [routerLink] = "['/vista-lista']" routerLinkActive="router-link-active">
+            <button mat-button>
+                <mat-icon aria-hidden="false" aria-label="List Icon">list</mat-icon>
+                Lista
+            </button>
+        </a>
+
+        <a [routerLink] = "['/vista-crear']" routerLinkActive="router-link-active">
+            <button mat-button>
+                <mat-icon aria-hidden="false" aria-label="plus icon">plus</mat-icon>
+                Adiccionar
+            </button>
+        </a>
+    </div>
+</nav>
+
