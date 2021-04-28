@@ -17,15 +17,20 @@
     <div>   
         <label for = "Genero">Genero</label>
         <br>
-        <label for="hombre">Hombre</label>
-        <input type="radio" name = "generos" value = "Hombre" formControlName = "generos" />
+        <div id = "check-input">
+            <input type="radio" name = "generos" value = "Hombre" formControlName = "generos" /> 
+            <label for="hombre">Hombre</label>
+        </div>
 
-        <label for="mujer">Mujer</label>
-        <input type="radio" name = "generos" value = "Mujer" formControlName = "generos" />
+        <div id = "check-input">
+            <input type="radio" name = "generos" value = "Mujer" formControlName = "generos" /> 
+            <label for="mujer">Mujer</label> 
+        </div>
 
-        <label for="otro">Otro</label>
+        <div id = "check-input">
         <input type="radio" name = "generos" value = "Otro" formControlName = "generos"/>
-    
+        <label for="otro">Otro</label>
+        </div>
     </div>
 
     <div>
@@ -42,12 +47,12 @@
     <div>
         <label for = "Ciudad">Ciudad</label>
         <br>
-        <input type="text" id="ciudadCliente" formControlName = "ciudad" />
+        <input type="text" id="ciudadCliente" formControlName = "ciudad" placeholder="input"/>
     </div>
 
     <div id="btn">
         <button type = "button" class="btn btn-default" (click) = "onReset()" >Cancelar</button>
-        <button type = "submit" class="btn btn-success" (click) = "onSubmit()">Añadir Usuario</button>
+        <button type = "submit" class="btn btn-success" (click) = "onSubmit()">Crear</button>
     </div>
 
 </div>

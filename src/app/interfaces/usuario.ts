@@ -27,7 +27,7 @@ export let ListaUsuario : Array<Usuario> =
         apellido: "Iriarte",
         genero: "Hombre",
         pais: "Chile",
-        ciudad: "Con Con"
+        ciudad: "Concón"
     },
     {
         nombre: "Daniel",

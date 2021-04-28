@@ -1,8 +1,13 @@
 .form-group{
-    border: 2px solid grey;
+    border: 3px solid black;
+    box-shadow: 10px 10px 10px gray;
     height: fit-content;
     width: min-content;
     background-color: grey;
+}
+
+p{
+    color: white;
 }
 
 div{
@@ -19,11 +24,28 @@ input{
     border: 2px solid black;
 }
 
+select{
+    width: 20em;
+    border: 2px solid black;
+}
 
-.radio-button{
+
+#check-input{
     display: flex;
-    flex-direction: column;
+    flex-direction:row ;
     margin: 5px;
+}
+
+#check-input label{
+    margin-left: 1em;
+    height: max-content;
+    width: max-content;
+}
+
+#check-input input{
+    margin-top: 2px;
+    width: min-content;
+    height: max-content;
 }
 
 .mat-form-field{
