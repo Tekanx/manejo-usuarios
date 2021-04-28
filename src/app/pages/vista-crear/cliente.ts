@@ -1,10 +1,12 @@
+import { AbstractControl } from "@angular/forms";
+
 export class Cliente {
 
     constructor(
-        public nombre : string,
-        public apellido : string,
-        public genero : string,
-        public pais : string,
-        public ciudad : string
+        public nombre : AbstractControl,
+        public apellido : AbstractControl,
+        public genero : AbstractControl,
+        public pais : AbstractControl,
+        public ciudad : AbstractControl
     ) { }
 }
