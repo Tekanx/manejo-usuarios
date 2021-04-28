@@ -45,7 +45,7 @@ export const ListaUsuario : Array<Usuario> =
     },
     {
         nombre: "Pablo",
-        apellido: "Torregey",
+        apellido: "Torreblanca",
         genero: "Otro",
         pais: "Chile",
         ciudad: "Viña del Mar"

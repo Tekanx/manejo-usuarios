@@ -1,0 +1,33 @@
+.form-group{
+    border: 2px solid grey;
+    height: fit-content;
+    width: min-content;
+    background-color: grey;
+}
+
+div{
+    margin: 1em;
+    padding: 1em;
+}
+
+label{
+    font-weight: bold;
+}
+
+input{
+    width: 20em;
+    border: 2px solid black;
+}
+
+.radio-button{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+#btn{
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+}
