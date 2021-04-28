@@ -1,22 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators, FormGroupDirective } from '@angular/forms';
 import { Usuario, ListaUsuario } from '../../interfaces/usuario'
-
+import { Cliente } from '../vista-crear/cliente'
 @Component({
   selector: 'app-vista-crear',
   templateUrl: './vista-crear.component.html',
   styleUrls: ['./vista-crear.component.scss']
 })
 export class VistaCrearComponent implements OnInit {
+  modelo = new Cliente('','','','','');
   
   genero : string | undefined;
+
   generos : string[] =
   [
     'Hombre',
     'Mujer',
     'Otro'
   ]
-  
 
   paises = 
   [
@@ -46,8 +47,8 @@ export class VistaCrearComponent implements OnInit {
   usuarioForm = new FormGroup({
     nombre : new FormControl('', [Validators.required, Validators.maxLength(30)]),
     apellido : new FormControl('', [Validators.required, Validators.maxLength(30)]),
-    genero : new FormControl('', [Validators.required]),
-    pais : new FormControl(''),
+    generos : new FormControl(''),
+    paises : new FormControl(''),
     ciudad : new FormControl('', [Validators.required, Validators.maxLength(50)])
   });
 
@@ -57,12 +58,9 @@ export class VistaCrearComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit(){
+  onSubmit(formCliente : FormGroupDirective){
     console.log("Hola!")
-  }
 
-  onReset(){
   }
-
 
 }

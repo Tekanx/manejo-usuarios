@@ -1,5 +1,5 @@
-<form id="formulario" [formGroup] = "usuarioForm" (ngSubmit) = "onSubmit()">
-    <div class="form-group">
+<form id="formulario" [formGroup] = "usuarioForm" #formCliente = "ngForm" (ngSubmit) = "onSubmit(formCliente)">
+<div class="form-group">
         
     <div>
         <label for = "nombre">Nombre </label>
@@ -17,11 +17,10 @@
     <div>   
         <label for = "Genero">Genero </label>
         <br>
-        <mat-radio-button class="radio-button" *ngFor = "let genero of generos" [value] = "genero">
+        <mat-radio-button class="radio-button" *ngFor = "let genero of generos" [value] = "genero" >
             {{genero}}
         </mat-radio-button>
     </div>
-
 
     <div>
         <label for = "Pais">Pais </label>
@@ -41,13 +40,14 @@
     </div>
 
     <div id="btn">
-        <button type = "button" class="btn btn-default" (click) = "onReset()">Cancelar</button>
-        <button type = "submit" class="btn btn-success">Añadir Usuario</button>
+        <button type = "button" class="btn btn-default" (click) = "formCliente.form.reset()">Cancelar</button>
+        <button type = "submit" class="btn btn-success" [disabled] = "!formCliente.form.valid">Añadir Usuario</button>
     </div>
 
-    </div>
-
-    <!--TODOS SON REQUIRED-->
+</div>
+    <p>
+        Form Status: {{usuarioForm.status}}
+    </p>
     
 </form>
 
