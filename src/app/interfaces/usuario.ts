@@ -6,7 +6,7 @@ export interface Usuario {
     ciudad : string;
 }
 
-export const ListaUsuario : Array<Usuario> = 
+export let ListaUsuario : Array<Usuario> = 
 [
     {
         nombre: "Roberto",

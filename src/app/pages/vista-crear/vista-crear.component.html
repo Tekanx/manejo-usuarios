@@ -1,47 +1,53 @@
-<form id="formulario" [formGroup] = "usuarioForm" #formCliente = "ngForm" (ngSubmit) = "onSubmit(formCliente)">
+<form id="formulario" [formGroup] = "usuarioForm">
 <div class="form-group">
         
     <div>
-        <label for = "nombre">Nombre </label>
+        <label for = "nombre">Nombre Cliente</label>
         <br>
-        <input type="text" id="nombreCliente" formControlName = "nombre" required>
+        <input type="text" id="nombreCliente" formControlName = "nombre" />
     
     </div> 
 
     <div>
-        <label for = "Apellido">Apellido </label>
+        <label for = "apellido">Apellido Cliente</label>
         <br>
-        <input type="text" id="apellidoCliente" formControlName = "apellido" required>   
+        <input type="text" id="apellidoCliente" formControlName = "apellido" />   
     </div>
 
     <div>   
-        <label for = "Genero">Genero </label>
+        <label for = "Genero">Genero</label>
         <br>
-        <mat-radio-button class="radio-button" *ngFor = "let genero of generos" [value] = "genero" >
-            {{genero}}
-        </mat-radio-button>
+        <label for="hombre">Hombre</label>
+        <input type="radio" name = "generos" value = "Hombre" formControlName = "generos" />
+
+        <label for="mujer">Mujer</label>
+        <input type="radio" name = "generos" value = "Mujer" formControlName = "generos" />
+
+        <label for="otro">Otro</label>
+        <input type="radio" name = "generos" value = "Otro" formControlName = "generos"/>
+    
     </div>
 
     <div>
-        <label for = "Pais">Pais </label>
+        <label for = "Pais">Pais</label>
         <br>
-        <mat-form-field appearance = "fill">
-            <mat-label>Pais</mat-label>
-            <mat-select>
-                <mat-option *ngFor = "let pais of paises" [value] = "pais">{{pais}}</mat-option>
-            </mat-select>
-        </mat-form-field>
+        <select name="Paises" formControlName = "paises">
+            <option value="" disabled selected>Select</option>
+            <option *ngFor = "let pais of paises" value="pais" [ngValue] = "pais">
+                {{pais}}
+            </option>
+        </select>
     </div>
 
     <div>
-         <label for = "Ciudad">Ciudad </label>
-         <br>
-        <input type="text" id="ciudadCliente" formControlName = "ciudad" required>
+        <label for = "Ciudad">Ciudad</label>
+        <br>
+        <input type="text" id="ciudadCliente" formControlName = "ciudad" />
     </div>
 
     <div id="btn">
-        <button type = "button" class="btn btn-default" (click) = "formCliente.form.reset()">Cancelar</button>
-        <button type = "submit" class="btn btn-success" [disabled] = "!formCliente.form.valid">Añadir Usuario</button>
+        <button type = "button" class="btn btn-default" (click) = "onReset()" >Cancelar</button>
+        <button type = "submit" class="btn btn-success" (click) = "onSubmit()">Añadir Usuario</button>
     </div>
 
 </div>
