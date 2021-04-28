@@ -7,7 +7,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatSelectModule } from '@angular/material/select';
 import { AppComponent } from './app.component';
 import { ListaUsuariosComponent } from './listadoUsuarios/lista-usuarios/lista-usuarios.component';
 import { HeaderComponent } from './default/header/header.component';
@@ -35,7 +37,10 @@ import { VistaCrearComponent } from './pages/vista-crear/vista-crear.component';
     MatToolbarModule, 
     NgbModule,
     MatCardModule,
-    MatListModule
+    MatListModule,
+    ReactiveFormsModule,
+    MatRadioModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

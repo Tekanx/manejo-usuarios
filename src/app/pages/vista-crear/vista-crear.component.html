@@ -1,1 +1,55 @@
-<p>vista-crear works!</p>
+<form id="formulario" [formGroup] = "usuarioForm" (ngSubmit) = "onSubmit()">
+    <div class="form-group">
+        
+    <div>
+        <label for = "nombre">Nombre </label>
+        <br>
+        <input type="text" id="nombreCliente" formControlName = "nombre" required>
+    
+    </div> 
+
+    <div>
+        <label for = "Apellido">Apellido </label>
+        <br>
+        <input type="text" id="apellidoCliente" formControlName = "apellido" required>   
+    </div>
+
+    <div>   
+        <label for = "Genero">Genero </label>
+        <br>
+        <mat-radio-button class="radio-button" *ngFor = "let genero of generos" [value] = "genero">
+            {{genero}}
+        </mat-radio-button>
+    </div>
+
+
+    <div>
+        <label for = "Pais">Pais </label>
+        <br>
+        <mat-form-field appearance = "fill">
+            <mat-label>Pais</mat-label>
+            <mat-select>
+                <mat-option *ngFor = "let pais of paises" [value] = "pais">{{pais}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+    <div>
+         <label for = "Ciudad">Ciudad </label>
+         <br>
+        <input type="text" id="ciudadCliente" formControlName = "ciudad" required>
+    </div>
+
+    <div id="btn">
+        <button type = "button" class="btn btn-default" (click) = "onReset()">Cancelar</button>
+        <button type = "submit" class="btn btn-success">Añadir Usuario</button>
+    </div>
+
+    </div>
+
+    <!--TODOS SON REQUIRED-->
+    
+</form>
+
+<div>
+
